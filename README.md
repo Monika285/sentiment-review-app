@@ -41,6 +41,9 @@ Storage: CSV files
 <img width="449" height="520" alt="image" src="https://github.com/user-attachments/assets/8e00bdb2-245f-4b06-9cc5-7c75e9b57412" />
 
 
+
+
+
 ⚙️ How It Works (High Level)
 
 Users submit reviews from the home page
