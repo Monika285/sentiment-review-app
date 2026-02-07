@@ -38,10 +38,24 @@ Sentiment Analysis: TextBlob (NLP)
 
 Storage: CSV files
 
-<img width="449" height="520" alt="image" src="https://github.com/user-attachments/assets/8e00bdb2-245f-4b06-9cc5-7c75e9b57412" />
-
-
-
+```
+project/
+│
+├── app.py
+├── requirements.txt
+├── admin.csv
+├── reviews.csv
+│
+├── templates/
+│   ├── user.html
+│   ├── admin_signup.html
+│   ├── admin_login.html
+│   ├── admin_dashboard.html
+│   ├── forgot_password.html
+│   └── reset_password.html
+│
+└── README.md
+```
 
 
 ⚙️ How It Works (High Level)
