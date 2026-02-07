@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Admin Dashboard</title>
+    <style>
+        body {
+            font-family: Arial;
+            background: #f4f6f8;
+            padding: 40px;
+        }
+
+        h2 {
+            margin-bottom: 10px;
+        }
+
+        a {
+            text-decoration: none;
+            color: #dc3545;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+            background: white;
+        }
+
+        th, td {
+            padding: 12px;
+            border: 1px solid #ddd;
+            text-align: left;
+        }
+
+        th {
+            background: #007bff;
+            color: white;
+        }
+
+        tr:nth-child(even) {
+            background: #f9f9f9;
+        }
+    </style>
+</head>
+<body>
+
+<h2>Admin Dashboard</h2>
+<a href="/admin/logout">Logout</a>
+
+{% if reviews %}
+<table>
+    <tr>
+        <th>Review</th>
+        <th>Sentiment</th>
+        <th>Word Count</th>
+    </tr>
+    {% for r in reviews %}
+    <tr>
+        <td>{{ r.review }}</td>
+        <td>{{ r.sentiment }}</td>
+        <td>{{ r.word_count }}</td>
+    </tr>
+    {% endfor %}
+</table>
+
+<form action="/admin/clear" method="POST">
+    <button type="submit"
+        style="
+            background:#056e0e;
+            color:white;
+            padding:10px 15px;
+            border:none;
+            border-radius:5px;
+            cursor:pointer;
+        ">
+        Clear All Reviews
+    </button>
+</form>
+
+
+{% else %}
+<p>No reviews yet.</p>
+{% endif %}
+
+</body>
+</html>
