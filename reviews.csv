@@ -1,2 +1,4 @@
 review,sentiment,word_count
-nice nice,Positive,2
+it was okay,Positive,3
+"very bad experience
+",Negative,3
